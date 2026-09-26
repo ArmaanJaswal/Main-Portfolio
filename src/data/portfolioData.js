@@ -11,7 +11,7 @@ export const portfolioData = {
     githubUsername: "ArmaanJaswal",
     linkedinUrl: "https://www.linkedin.com/in/armaan-jaswal-830012249/",
     twitterUrl: "https://x.com/ArmaanJaswal2",
-    resumeUrl: "https://drive.google.com/file/d/1toVCLhwrZwPv6daTN7mjvGpdKOYIERUU/view?usp=drive_link",
+    resumeUrl: "https://drive.google.com/file/d/1QNlpV2uOZD_xPka3x_XJxB8YDSqQQoLP/view?usp=sharing",
     bannerPresets: [
       {
         id: "cosmic",
@@ -43,7 +43,7 @@ export const portfolioData = {
     { name: "LinkedIn", url: "https://www.linkedin.com/in/armaan-jaswal-830012249/", type: "linkedin", handle: "armaan-jaswal" },
     { name: "X (Twitter)", url: "https://x.com/ArmaanJaswal2", type: "x", handle: "@ArmaanJaswal2" },
     { name: "Mail", url: "mailto:armaanjaswal78@gmail.com", type: "mail", handle: "armaanjaswal78@gmail.com" },
-    { name: "Resume", url: "https://drive.google.com/file/d/1toVCLhwrZwPv6daTN7mjvGpdKOYIERUU/view?usp=drive_link", type: "resume", handle: "View PDF" }
+    { name: "Resume", url: "https://drive.google.com/file/d/1QNlpV2uOZD_xPka3x_XJxB8YDSqQQoLP/view?usp=sharing", type: "resume", handle: "View PDF" }
   ],
   projects: [
     {

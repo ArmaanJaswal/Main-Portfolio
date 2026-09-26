@@ -7,34 +7,11 @@ export default function ContactBar({ onShowToast }) {
   const { profile, contacts } = portfolioData;
   const [copied, setCopied] = useState(false);
 
-  // Directly bind to profile URLs so updating profile in portfolioData always immediately works
-  const resolvedContacts = [
-    {
-      name: "GitHub",
-      url: profile.githubUsername ? `https://github.com/${profile.githubUsername}` : (contacts?.[0]?.url || "https://github.com/ArmaanJaswal"),
-      type: "github"
-    },
-    {
-      name: "LinkedIn",
-      url: profile.linkedinUrl || contacts?.find(c => c.type === 'linkedin')?.url || "https://www.linkedin.com/in/armaan-jaswal-830012249/",
-      type: "linkedin"
-    },
-    {
-      name: "X (Twitter)",
-      url: profile.twitterUrl || contacts?.find(c => c.type === 'x')?.url || "https://x.com/ArmaanJaswal2",
-      type: "x"
-    },
-    {
-      name: "Mail",
-      url: `mailto:${profile.email || "armaanjaswal78@gmail.com"}`,
-      type: "mail"
-    },
-    {
-      name: "Resume",
-      url: profile.resumeUrl || contacts?.find(c => c.type === 'resume')?.url || "https://drive.google.com/file/d/1toVCLhwrZwPv6daTN7mjvGpdKOYIERUU/view?usp=drive_link",
-      type: "resume"
-    }
-  ];
+  // Directly use contacts array from portfolioData
+  const resolvedContacts = (contacts || []).map((c) => ({
+    ...c,
+    url: c.type === 'mail' && profile.email ? `mailto:${profile.email}` : c.url
+  }));
 
   const getIcon = (type) => {
     switch (type) {
